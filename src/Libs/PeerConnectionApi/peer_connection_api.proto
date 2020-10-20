@@ -1,0 +1,85 @@
+syntax = "proto3";
+
+package peer_connection;
+
+service PeerConnectionApi 
+{
+// create offer
+rpc createOffer(OfferDescriptor) returns (CreateSessionDescriptionResponse) {}
+// create answer
+rpc createAnswer(AnswerDescriptor) returns (CreateSessionDescriptionResponse) {}
+// set local description
+rpc setLocalDescription(SessionDescription) returns (SetSessionDescriptionResponse) {}
+// set remote description
+rpc setRemoteDescription(SessionDescription) returns (SetSessionDescriptionResponse) {}
+// stream control
+rpc startStreaming(StartStreamingRequest) returns (StartStreamingResponse) {}
+// stream control
+rpc stopStreaming(StopStreamingRequest) returns (StopStreamingResponse) {}
+// shutdown server
+rpc shutdown(ShutdownRequest) returns (ShutdownResponse) {}
+}
+
+message OfferDescriptor
+{
+  // not needed for now: only supporting application/sdp
+  string content_type = 1;
+}
+
+message AnswerDescriptor
+{
+  SessionDescription session_description = 1;
+}
+
+message CreateSessionDescriptionResponse
+{
+  uint32 response_code = 1;
+  string response_description = 2;
+  SessionDescription session_description = 3;
+}
+
+message SetSessionDescriptionResponse
+{
+  uint32 response_code = 1;
+  string response_description = 2;
+}
+
+message SessionDescription
+{
+  // not needed for now: only supporting application/sdp
+  string content_type = 1;
+  string session_description = 2;
+}
+
+message StartStreamingRequest
+{
+
+}
+
+message StartStreamingResponse
+{
+  uint32 response_code = 1;
+  string response_description = 2;
+}
+
+message StopStreamingRequest
+{
+
+}
+
+message StopStreamingResponse
+{
+  uint32 response_code = 1;
+  string response_description = 2;
+}
+
+message ShutdownRequest
+{
+
+}
+
+message ShutdownResponse
+{
+  uint32 response_code = 1;
+  string response_description = 2;
+}

@@ -1,0 +1,5 @@
+ADD_SUBDIRECTORY( MultipathRTODataExtractor )
+ADD_SUBDIRECTORY( GenerateEc2EvalScripts )
+#ADD_SUBDIRECTORY( GeneratePacketTrace )
+#ADD_SUBDIRECTORY( GeneratePSNR )
+#ADD_SUBDIRECTORY( GenerateYUV )

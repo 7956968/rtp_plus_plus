@@ -1,0 +1,19 @@
+v=0
+o= - 1321352955758604 1 IN IP4 <<src>>
+s=Session streamed by "rtp++"
+i=<<src>>
+t=0 0
+c=IN IP4 <<src>>
+a=type:broadcast
+a=control:*
+a=source-filter: incl IN IP4 * <<src>>
+a=rtcp-unicast: reflection
+a=range:npt=0-
+a=x-qt-text-nam:Session streamed by "rtp++"
+a=x-qt-text-inf:dstv.mm1
+m=video <<port>> RTP/AVP 96
+c=IN IP4 <<src>>
+b=AS:<<bw>>
+a=rtpmap:96 H265/90000
+a=fmtp:96 packetization-mode=1;profile-level-id=304941;sprop-parameter-sets=J0IAFI1oFglE,AAAAAQ==
+a=control:track1

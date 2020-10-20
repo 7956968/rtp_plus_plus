@@ -1,0 +1,9 @@
+#!/bin/bash
+
+cur_dir=$(pwd)
+echo "Current dir: "$cur_dir
+mkdir -p log/<<session>>
+
+export GLOG_v=2
+export GLOG_log_dir=$cur_dir/log/<<session>>
+./RtpReceiver --nc <<session>>.cfg --sdp <<session>>.sdp

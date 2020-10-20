@@ -1,0 +1,4 @@
+#ifndef RTPMEDIASINK_H
+#define RTPMEDIASINK_H
+
+#endif // RTPMEDIASINK_H

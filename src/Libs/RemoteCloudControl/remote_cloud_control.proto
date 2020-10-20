@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package rtp_plus_plus;
+
+service RemoteCloudControl
+{
+rpc call(CalleeInfo) returns (Response) {}
+}
+
+message CalleeInfo
+{
+  string sip_uri = 1;
+  int32 call_duration = 2;
+  int32 transport = 3;
+  string video_media_type = 4;
+  string video_device = 5;
+  int32 fps = 6;
+  int32 kbps = 7;
+  int32 rtx_time = 8;
+  int32 buf_lat = 9;
+  int32 rapid_sync_mode = 10;
+  int32 rtcp_sr = 11;
+  string rtcp_fb = 12;
+}
+
+message Response
+{
+  int32 response_code = 1;
+  string description = 2;
+}
+

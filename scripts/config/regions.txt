@@ -1,0 +1,7 @@
+REGION	eu-west-1	ec2.eu-west-1.amazonaws.com i-da59f491 IR
+REGION	sa-east-1	ec2.sa-east-1.amazonaws.com i-4b16ef57 SP
+REGION	us-east-1	ec2.us-east-1.amazonaws.com i-8c8badf1 NV
+REGION	ap-northeast-1	ec2.ap-northeast-1.amazonaws.com i-400fd943 TO
+REGION	us-west-2	ec2.us-west-2.amazonaws.com i-4d9ac37e OR
+REGION	us-west-1	ec2.us-west-1.amazonaws.com i-31ad7268 NC
+REGION	ap-southeast-1	ec2.ap-southeast-1.amazonaws.com i-328c8566 SI

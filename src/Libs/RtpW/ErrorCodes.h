@@ -1,0 +1,8 @@
+#ifndef ERRORCODES_H
+#define ERRORCODES_H
+
+#define RTPW_EC_NO_ERROR 0
+#define RTPW_EC_GENERIC 1
+#define RTPW_EC_NULL_POINTER 2
+
+#endif // ERRORCODES_H

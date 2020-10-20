@@ -1,0 +1,7 @@
+INSTANCE	i-da59f491	stopped	pending
+INSTANCE	i-4b16ef57	stopped	pending
+INSTANCE	i-8c8badf1	stopped	pending
+INSTANCE	i-400fd943	stopped	pending
+INSTANCE	i-4d9ac37e	stopped	pending
+INSTANCE	i-31ad7268	stopped	pending
+INSTANCE	i-328c8566	stopped	pending

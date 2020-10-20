@@ -1,0 +1,13 @@
+v=0
+o= - 1321352955758604 1 IN IP4 <<sender>>
+s=Session streamed by "rtp++"
+i=rtp++
+t=0 0
+c=IN IP4 <<sender>>
+a=control:*
+a=range:npt=0-
+m=video <<sender_port>> RTP/AVP 96
+b=AS:1000
+a=rtpmap:96 H266/90000
+a=fmtp:96 packetization-mode=1
+a=extmap:1 urn:ietf:params:rtp-hdrext:ntp-64

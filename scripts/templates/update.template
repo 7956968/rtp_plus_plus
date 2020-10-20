@@ -1,0 +1,49 @@
+#!/bin/bash
+
+cd /home/<<user>>/data
+rtp=$(ls rtp++_*.tar.gz)
+
+if [ -z "$rtp" ]; then
+# no rtp archive
+  logger "no rtp archive: checking for commands"
+  cmd=$(ls START.cmd)
+  if [ -z "$cmd" ]; then
+    cmd=$(ls STOP.cmd)
+    if [ "$cmd" ]; then
+      logger "Stopping RTP sessions"
+      rm STOP.cmd
+      cd ../rtp++
+      ./stop.sh
+    fi
+  else
+    logger "Starting RTP sessions"
+    rm START.cmd
+    cd ../rtp++
+    ./run.sh
+  fi
+else
+
+  logger "Found $rtp"
+
+  if [ -e "UPDATE.cmd" ]; then
+    logger "Updating"
+    rm "UPDATE.cmd"
+  fi
+
+# remove existing tars
+  rm ../rtp++_*.tar.gz
+
+# copy new archive
+  mv $rtp ../
+  cd ../
+
+# remove existing rtp++ directory
+  if [ -d rtp++ ]; then
+    rm -fr rtp++
+  fi
+
+# extract new tar
+  logger "Extracting $rtp"
+  tar -xvzf $rtp
+fi
+

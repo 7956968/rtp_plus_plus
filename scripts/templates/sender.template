@@ -1,0 +1,11 @@
+#!/bin/bash
+
+cur_dir=$(pwd)
+echo "Current dir: "$cur_dir
+mkdir -p log/<<session>>
+
+export GLOG_v=2
+export GLOG_log_dir=$cur_dir/log/<<session>>
+# bitrate = 500kbps
+./RtpSender --nc <<session>>.cfg --sdp <<session>>.sdp --fps 50 --v-ps 1250
+
